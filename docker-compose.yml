@@ -1,0 +1,16 @@
+version: '1.0'
+
+services:
+  koma-linux:
+    container_name: koma-linux
+    image: mikekoma/koma/koma-linux:1.0.0
+    build: .
+    ports:
+      - 10022:22
+      - 80:80
+      - 18080:8080
+    volumes:
+      - ./user:/home/koma
+      - ./web:/var/www/html
+     
+                                         	
